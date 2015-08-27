@@ -1,0 +1,4 @@
+* { margin: 0; padding: 0;}
+#show_bigger_pic { position: absolute; width: 500px; height: 400px; top: 200px; left: 200px;}
+/* 小图区 */
+.small_pic_div{ width: 267px; height: 176px; border: 1px solid; float: left; position: relative;}
