@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+   <script src="js/jquery.min.js" ></script>
+  <link rel="stylesheet" href="">
+  <style>
+    .box { width: 600px; margin: 0 auto; height: 300px; background: #f6f6f6; border: 2px solid #f1f1f1;}
+    .box input { display: inline-block; width: 60px; height: 60px; margin-top: 30px;}
+    .box input[type="button"] { width: 120px; height:60px; display:block; margin: 10px auto;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <form action="#">
+      <input type="text" id="a" rrr=a>
+      <input type="text" id="b" rrr=b>
+      <input type="text" id="c" rrr=c>
+      <input type="text" id="d" rrr=d>
+      <input type="text" id="e" rrr=e>
+      <input type="text" id="f" rrr=f>
+      <input type="button" value="提交" id="btn">
+    </form>
+  </div>
+  <script type="text/javascript">
+    var list = ["#a","#b","#c","#d","#e","#f"]
+ 
+    function inputRandom(){
+
+      var index=Math.floor(Math.random()*list.length)
+      
+       $(list[index]).val($(list[index]).attr("rrr"))
+
+      list.splice(index,1)
+    }
+
+
+
+   $('#btn').click(function(){
+     inputRandom()
+  inputRandom()
+ inputRandom()
+   })
+    
+
+  </script>
+ 
+</body>
+</html>

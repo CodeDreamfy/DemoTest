@@ -1,0 +1,17 @@
+*, textarea, p, h1 { margin: 0; padding: 0;}
+a { text-decoration: none; color: #000;}
+.box { width: 500px; margin: 20px auto; border: 1px solid #f1f1f1}
+.header { height: 30px;}
+.header .niuyun { float: left; width: 260px; height: 30px; background: #f6f600; }
+.header .ad { float: right; line-height: 30px;}
+.header .ad:hover { text-decoration: underline;}
+.textcontent { width: 498px;}
+.textcontent textarea { width: 100%; height: 120px; resize: none;}
+.box .number { line-height: 30px; text-align: right;}
+.box .number em { font-size: 26px; color: green; font-style: italic; padding: 0 5px;}
+.box .number .exceed { color: red;}
+.box .footer { height: 60px; margin: 10px 0;}
+.footer .menu { width: 220px; height: 60px; background: #c15266; float: left;}
+.footer .btn { width: 120px; margin-right: 10px; line-height: 60px; text-align: center; font-size: 22px; float: right; background: #f1f1f1; color: #ccc; border-radius: 8px;}
+.footer .send { background: green; color: #fff;}
+

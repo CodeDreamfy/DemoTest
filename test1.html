@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+   <script src="js/jquery.min.js" ></script>
+  <link rel="stylesheet" href="">
+  <style>
+    .box { width: 600px; margin: 0 auto; height: 300px; background: #f6f6f6; border: 2px solid #f1f1f1;}
+    .box input { display: inline-block; width: 60px; height: 60px; margin-top: 30px;}
+    .box input[type="button"] { width: 120px; height:60px; display:block; margin: 10px auto;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <form action="#">
+      <input type="text" id="a">
+      <input type="text" id="b">
+      <input type="text" id="c">
+      <input type="text" id="d">
+      <input type="text" id="e">
+      <input type="text" id="f">
+      <input type="button" value="提交" id="btn">
+    </form>
+  </div>
+  <script type="text/javascript">
+    var $list = $('.box input[type="text"]');
+    var $Btn = $('#btn');
+    var random_list = [];
+    $.each(['a','b','c','d','e','f'],function(index,value){
+      random_list[index] = {
+        el:$list.eq(index),
+        value:value
+      };
+    });
+    $Btn.on('click', function(){
+      Randoms = sendRandom();
+      console.log(Randoms);
+      $.each(Randoms, function(index, item) {
+        item.el.val(item.value);
+      });
+    });
+
+    function sendRandom(){
+    /*
+    var Randoms=[];
+    for(var i=0; i<2 && random_list.length>0; i++) {
+      var  flag = Math.floor((Math.random()*random_list.length));
+      Randoms.push(random_list[flag]);
+      random_list.splice(flag,1);
+    }
+    */
+      var arr = [], flag;
+      init = function(){
+        flag = Math.floor((Math.random()*6+1));
+      }
+    
+      return Randoms;
+    }
+
+  </script>
+ 
+</body>
+</html>

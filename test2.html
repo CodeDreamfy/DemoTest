@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset='utf-8'>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+</head>
+<body>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text"/>
+    <input type="text" placeholder="生成几个" class="getNumber"/>
+    <button>生成</button>
+    <script type="text/javascript">
+    var list = ['a','b','c','d','e','f'];
+    var inputList = $('input[type="text"]');
+    var sub = 0;
+    var valIndex = list.length;
+    var number = $('.getNumber');
+    $('button').click(function(){
+        random(number.val());
+    });
+    function random(flag){
+        for(var i = 0; i < flag;i++,sub++){
+            if(list.length == 0){break;}
+            var index = ~~(Math.random() * list.length);
+            while(1){
+                var p = ~~(Math.random()*valIndex);
+                if(inputList.eq(p).val()){continue;}
+                inputList.eq(p).val(list.splice(index,1));
+                break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>
