@@ -1,0 +1,12 @@
+* {margin: 0; padding: 0;}
+a { text-decoration: none;}
+.box { width: 600px; margin: 80px auto;}
+.box .nav { width: 600px; height: 37px; text-align: center; border-bottom: 1px solid #999;}
+.box .nav a { width: 196px; margin-right: 3px; position: relative; bottom: 0; line-height: 36px; border: 1px solid #999; border-bottom: none; border-radius: 8px 8px 0 0; float: left; background: #f1f1f1;}
+.box .nav a:last-child { margin-right: 0;}
+.box .nav .active { bottom: -1px; background: #fff; z-index: 1;}
+.box .content { width: 598px; height: 80px; padding-top: 5px; border: 1px solid #999; border-top: none;}
+.box .content[data-tab="1"] {}
+.box .content[data-tab="2"] { display: none;}
+.box .content[data-tab="3"] { display: none;}
+/* 200 */
